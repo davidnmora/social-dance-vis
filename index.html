@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Social Dance Visualization - v5.3</title>
+  
+  
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Social Dance Vis</title>
+</head>
+
+<body>
+<!-- Loading icon -->
+  <div class="loading">
+  <div>
+    <div class="c1"></div>
+    <div class="c2"></div>
+    <div class="c3"></div>
+    <div class="c4"></div>
+  </div>
+  <span>loading</span>
+</div> <!-- closes loading icon -->
+  <div id="wrapper">
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+
+        <li>
+          <!--             MY LEGEND HTML -->
+          <div class="legend-wrapper">
+            <div id="legend">
+              <h1 id="legend-title">Legend</h1>
+              <p>Richard Powers powers through 8 dance styles and 150+ moves in 10 weeks at Stanford. Here's a big picture look. </p>
+              <div id="legend-key">
+              <p>How it works: </p>
+              <div class="row legend-section dance-style">
+                <div class="legend-section col-sm-3 dance-style">
+                  <svg class="legend-svg dance-style">
+                      <circle cx="50" cy="50" r="40" />
+                    </svg>
+                </div>
+
+                <div class="col-sm-9">
+                  <p class="legend-text">All moves are grouped by dance style</p>
+                </div>
+
+              </div>
+              <div class="row legend-section dance-sub-category">
+
+                <div class="legend-section col-sm-3 dance-sub-category">
+                  <svg class="legend-svg dance-sub-category">
+                      <circle cx="50" cy="50" r="30" />
+                    </svg>
+                </div>
+
+                <div class="col-sm-9">
+                  <p class="legend-text">... and then into sub-categories</p>
+                </div>
+              </div>
+              <div class="row legend-section dance-move">
+
+                <div class="legend-section col-sm-3 dance-move">
+                  <svg class="legend-svg dance-move">
+                    <circle cx="50" cy="50" r="15" fill="white" />
+                  </svg>
+                </div>
+
+                <div class="col-sm-9">
+                  <p class="legend-text">... which hold individual dance moves.</p>
+
+                </div>
+
+              </div>
+              </div> <!-- closes legend-key -->
+
+              <p class="legend-text"> Click to zoom, and click dance moves for a video demo (grey circles mean there's no video).</p>
+              <div id="done-button" class="col-sm-12">
+                <button class="btn btn-default">Got it!</button>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+      <div class="container-fluid">
+      </div>
+      <h1 id="title">Social Dance Moves by Style</h1>
+      <br>
+      <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Legend</a>
+      <a href="#zoom-out" class="btn btn-default" id="zoom-out">Zoom out</a>
+      <br>
+      <div id="traceNodeParentsWrapper">
+        <div id="trace-node-parents"> Dance Figure: </div>
+      </div>
+
+      <div id="d3-vis-div"></div>
+
+<div id="credits-footer"> Vis created by <a target="_blank" href="http://www.davidnmora.com/">David Mora</a> based off Social Dance 2 as taught by <a target="_blank" href="http://richardpowers.com">Richard Powers</a>, videos by <a target="_blank" href="http://www.libraryofdance.org">Library of Dance</a>. Data and code avaialable <a target="_blank" href="https://codepen.io/davidnmora/pen/oLQqbp"> here.</a> </div> 
+<!--       closes footer -->
+    </div>
+    <!-- /#page-content-wrapper -->
+  </div>
+  <!-- /#wrapper -->
+</body>
+</html>
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

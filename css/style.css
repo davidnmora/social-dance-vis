@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-size: 5em;
+  text-align: left;
+  padding: 30px;
+  padding-left: 0px;
+  color: black
+}
+
+/* LEGEND CSS */
+#legend-title {
+  color: white;
+  font-size: 70px;
+}
+
+#legend {
+  background: black;
+  margin: auto;
+  padding: 20px;
+  width: 80%;
+  border:  solid 2px black;
+  color: white;
+  text-indent: 0px;
+  font-size: 24px;
+}
+
+#legend-key {
+  margin-left: 25px;
+  margin-right: 20px;
+}
+
+.legend-section:hover {
+  background: grey;
+}
+
+.col-sm-3 svg {
+  height: 100px;
+  width: 100px;
+}
+
+.btn.btn-default {
+  opacity: 1; 
+  background: #308CB4; /* dark-ish blue of inner circles */
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 36px;
+  padding: 20px 20px;
+  transition: background 0.75s, color 0.75s;
+}
+
+.btn.btn-default:hover {
+  background: #C0475A; /*   burnt pink-red */
+}
+
+#zoom-out.btn {
+  background: #C0475A;
+  margin-left: -3px;
+}
+#zoom-out.btn:hover {
+  background: #308CB4;
+}
+
+/*     ____ D3 CSS  ______    */
+
+/* COLORS- lighter: hsl(152,80%,80%), darker: hsl(228,30%,40%) */
+
+/* disable user highlighting */
+text, p, h1 {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;   
+}
+
+.node {
+  cursor: pointer;
+}
+
+.node:hover {
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+
+.node--leaf {
+  fill: white;
+}
+.node--leaf:hover {
+  fill: #C0475A; /* burnt pink-red */
+}
+
+.label {
+  font-size: 1.4em;
+  text-anchor: middle;
+  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+}
+
+.label,
+.node--root,
+.node--leaf,
+tspan {
+  pointer-events: none;
+  /* makes elemenet invisble to clicking */
+}
+
+.label.is-clickable, .node--leaf.is-clickable {
+  pointer-events: all;  
+}
+
+.node--leaf.is-clickable.no-video {
+  pointer-events: none;
+  fill: grey;
+}
+
+/* after node has been clicked */
+.node--leaf.has-been-clicked {
+  opacity: 0.70;
+}
+
+#traceNodeParentsWrapper {
+  background-color: black;
+  border-radius: 5px;
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  opacity: 1;
+  padding: 10px;
+  font-size: 18px;
+}
+#trace-node-parents {
+  color: white;
+}
+
+
+/*!
+ * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+/* TO ADJUST SIDEBAR WIDTH: 
+current-width: 501px
+replace current with new desired width */
+
+ body {
+    overflow-x: hidden;
+ }
+
+/* Toggle Styles */
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 501px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 501px;
+    width: 0;
+    height: 100%;
+    margin-left: -501px;
+    overflow-y: auto;
+    background: #000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+
+
+
+/* ADJUST WIDTH */
+#wrapper.toggled #sidebar-wrapper {
+    width: 500px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -501px;
+}
+
+/* Sidebar Styles */
+
+#done-button {
+  padding-left: 0px
+}
+
+/* TO ADJUST INTERNAL SIDEBAR */
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 500px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 501px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 501px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
+/* VIDEO LOADING ICON AND YOUTUBE VIDEO */
+
+.dance-video {
+  z-index: 1000001; 
+  position: fixed; 
+  left: 50%; 
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+}
+
+/* THE LOADING ICON CSS */
+
+.loading {
+  width: 100%;
+  height: 100%;
+  background: #16171d;
+  opacity: 0.9;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  
+  z-index: 1000000;
+}
+
+.loading > div {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 50%;
+  margin-left: -30px;
+  top: 50%;
+  margin-top: -30px;
+}
+
+.loading > div > div {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #C0475A; /* burnt pink-red */;
+  top: 10px;
+  left: 10px;
+  transform-origin: 20px 20px;
+  border-radius: 8px;
+  animation: spin-a 2s infinite cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.loading > div > .c2 {
+  top: 10px;
+  left: auto;
+  right: 10px;
+  transform-origin: -4px 20px;
+  animation: spin-b 2s infinite cubic-bezier(0.5, 0, 0.5, 1);
+}
+.loading > div > .c3 {
+  top: auto;
+  left: auto;
+  right: 10px;
+  bottom: 10px;
+  transform-origin: -4px -4px;
+  animation: spin-c 2s infinite cubic-bezier(0.5, 0, 0.5, 1);
+}
+.loading > div > .c4 {
+  top: auto;
+  bottom: 10px;
+  transform-origin: 20px -4px;
+  animation: spin-d 2s infinite cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+@keyframes spin-a {
+  0%   { transform: rotate(90deg); }
+  0%  { transform: rotate(90deg); }
+  50%  { transform: rotate(180deg); }
+  75%  { transform: rotate(270deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes spin-b {
+  0%   { transform: rotate(90deg); }
+  25%  { transform: rotate(90deg); }
+  25%  { transform: rotate(180deg); }
+  75%  { transform: rotate(270deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes spin-c {
+  0%   { transform: rotate(90deg); }
+  25%  { transform: rotate(90deg); }
+  50%  { transform: rotate(180deg); }
+  50%  { transform: rotate(270deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes spin-d {
+  0%   { transform: rotate(90deg); }
+  25%  { transform: rotate(90deg); }
+  50%  { transform: rotate(180deg); }
+  75%  { transform: rotate(270deg); }
+  75% { transform: rotate(360deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+.loading > span {
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+  top: 50%;
+  margin-top: 30px;
+  color: #ff8c00;
+  font-size: 12px;
+  text-align: center;
+}
+
+.content { padding: 1.5em; }
